@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Gallery from './components/Gallery';
 import './styles.css';
 
-const App = () => {
+function App() {
     //The useState hook is used to manage the state of tours and loading status
     const [tours, setTours] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ const App = () => {
     return (
         <Router>
             <div className="App">
-                <div className="toolbar">
+                
                     <h1>Tour Comparison App</h1>
                 </div>
                 {loading ? (
@@ -44,10 +44,10 @@ const App = () => {
                         </Route>
                     </Switch>
                 )}
-            </div>
+            
         </Router>
     );
-};
+}
 
 export default App;
 

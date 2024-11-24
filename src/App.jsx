@@ -14,7 +14,7 @@ const App = () => {
     useEffect(() => {
         const fetchTours = async () => {
             try {
-                const response = await fetch('https://api.example.com/tours'); // Replace with your API endpoint
+                const response = await fetch('https://course-api.com/react-tours-project'); // Replace with your API endpoint
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 setTours(data);
@@ -31,7 +31,7 @@ const App = () => {
 // Updated App.jsx with Toolbar
     return (
         <Router>
-            <div className="app">
+            <div className="App">
                 <div className="toolbar">
                     <h1>Tour Comparison App</h1>
                 </div>

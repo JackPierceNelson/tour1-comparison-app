@@ -50,3 +50,6 @@ const App = () => {
 };
 
 export default App;
+
+
+// Setup root component with global state and routing

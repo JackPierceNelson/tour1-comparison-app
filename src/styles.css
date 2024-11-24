@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    padding: 20px;
+}
+
+.gallery {
+    max-width: 800px;
+    margin: auto;
+}
+
+.tour-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tour-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33% - 20px);
+}
+
+.tour-details {
+    margin-top: 10px;
+}

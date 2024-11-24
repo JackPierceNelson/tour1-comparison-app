@@ -1,29 +1,101 @@
+/* General Styles */
+/* Set a clean font and background color for the entire app */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Center align the main heading*/
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-.app {
+/* Toolbar Styles */
+/* A blue background with white text for the toolbar enhances visibility */
+/* Centered text for a neat appearance */
+.toolbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.toolbar h1 {
+    margin: 0;
+}
+
+/* Gallery Styles */
+/* The gallery is centered and has a maximum width to prevent it from stretching too wide on larger screens */
+.gallery {
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
 }
 
-.gallery {
-    max-width: 800px;
-    margin: auto;
-}
-
+/* Tour List Styles */
+/* Flexbox is used to create a responsive grid layout for tour cards */
 .tour-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between; /* Space between cards */
 }
 
+/* Tour Card Styles */
+/* Each card has a white background, rounded corners, and a subtle shadow for depth */
 .tour-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    width: calc(33% - 20px);
+    padding: 15px;
+    width: calc(33% - 20px); /* Responsive width */
+    transition: transform 0.2s ease; /* Animation on hover */
+}
+/* Cards slightly lift on hover to provide interactivity */
+.tour-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
-.tour-details {
-    margin-top: 10px;
+.tour-card img {
+    width: 100%; /* Responsive image */
+    border-radius: 8px;
+}
+
+.tour-card h2 {
+    font-size: 1.5em;
+}
+
+.tour-card p {
+    color: #555; /* Description color */
+}
+/* Buttons have a consistent style with rounded corners and a hover effect that changes the background color */
+* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+/* Media queries adjust the card layout based on screen size, ensuring that the app looks good on mobile devices, tablets, and desktops */
+@media (max-width: 768px) {
+    .tour-card {
+        width: calc(50% - 20px); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-card {
+        width: calc(100% - 20px); /* One card per row on mobile */
+    }
 }

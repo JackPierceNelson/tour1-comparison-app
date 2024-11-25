@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Displays a loading message while data is being fetched and renders the Gallery component once the data is available
 import Gallery from './Gallery';
 import './styles.css';
@@ -38,11 +38,11 @@ function App() {
                 {loading ? (
                     <p>Loading tours...</p>
                 ) : (
-                    <Switch>
+                    <Routes>
                         <Route path="/" exact>
                             <Gallery tours={tours} />
                         </Route>
-                    </Switch>
+                    </Routes>
                 )}
             
         </Router>

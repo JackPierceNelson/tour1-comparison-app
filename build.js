@@ -1,5 +1,6 @@
 // build.js
-const esbuild = require('esbuild');
+// const esbuild = require('esbuild');
+import * as esbuild from 'esbuild';
 
 async function build() {
     try {
@@ -9,6 +10,7 @@ async function build() {
             outfile: 'dist/out.js',
             minify: true, 
             sourcemap: true,
+            loader: {'.jsx':'.jsx'},
         });
         console.log('Build successful!');
     } catch (error) {
